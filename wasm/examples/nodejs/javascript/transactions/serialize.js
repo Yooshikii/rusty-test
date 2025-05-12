@@ -33,7 +33,7 @@ const {
     const { transactions, summary } = await createTransactions({
         entries,
         outputs: [{
-            address: 'kaspa:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp',
+            address: 'vecno:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp',
             amount: 400000000n
         }],
         changeAddress: address,

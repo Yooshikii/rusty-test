@@ -37,7 +37,7 @@ kaspa.init_console_panic_hook();
 
     // let res = await rpc.getBlockTemplate({
     //     extraData:[],
-    //     payAddress:"kaspa:qrwee7xc2qw5whq8qzv82qjld6zunwy46lsy3hueej5kvgfwvamhswy03lsyh"
+    //     payAddress:"vecno:qrwee7xc2qw5whq8qzv82qjld6zunwy46lsy3hueej5kvgfwvamhswy03lsyh"
     // });
     // console.log("res", res.block.header.blueWork);
 
@@ -46,11 +46,11 @@ kaspa.init_console_panic_hook();
     const info = await rpc.getInfo();
     console.log("info", info);
 
-    const addr = address ?? "kaspatest:qz7ulu4c25dh7fzec9zjyrmlhnkzrg4wmf89q7gzr3gfrsj3uz6xjceef60sd";
+    const addr = address ?? "vecnotest:qz7ulu4c25dh7fzec9zjyrmlhnkzrg4wmf89q7gzr3gfrsj3uz6xjceef60sd";
 
     const addresses = [
         addr,
-        //new Address("kaspatest:qz7ulu4c25dh7fzec9zjyrmlhnkzrg4wmf89q7gzr3gfrsj3uz6xjceef60sd")
+        //new Address("vecnotest:qz7ulu4c25dh7fzec9zjyrmlhnkzrg4wmf89q7gzr3gfrsj3uz6xjceef60sd")
     ];
 
     console.log("\ngetting UTXOs...", addresses);

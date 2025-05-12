@@ -204,7 +204,7 @@ pub enum Opcodes {
 
     OpCheckMultiSigECDSA = 0xa9,
 
-    OpBlake2b = 0xaa,
+    OpBlake3 = 0xaa,
     OpCheckSigECDSA = 0xab,
     OpCheckSig = 0xac,
     OpCheckSigVerify = 0xad,

@@ -468,28 +468,7 @@ impl From<NetworkId> for Params {
 }
 
 pub const MAINNET_PARAMS: Params = Params {
-    dns_seeders: &[
-        // This DNS seeder is run by Denis Mashkevich
-        "mainnet-dnsseed-1.kaspanet.org",
-        // This DNS seeder is run by Denis Mashkevich
-        "mainnet-dnsseed-2.kaspanet.org",
-        // This DNS seeder is run by Georges Künzli
-        "seeder1.kaspad.net",
-        // This DNS seeder is run by Georges Künzli
-        "seeder2.kaspad.net",
-        // This DNS seeder is run by Georges Künzli
-        "seeder3.kaspad.net",
-        // This DNS seeder is run by Georges Künzli
-        "seeder4.kaspad.net",
-        // This DNS seeder is run by Tim
-        "kaspadns.kaspacalc.net",
-        // This DNS seeder is run by supertypo
-        "n-mainnet.kaspa.ws",
-        // This DNS seeder is run by -gerri-
-        "dnsseeder-kaspa-mainnet.x-con.at",
-        // This DNS seeder is run by H@H
-        "ns-mainnet.kaspa-dnsseeder.net",
-    ],
+    dns_seeders: &[],
     net: NetworkId::new(NetworkType::Mainnet),
     genesis: GENESIS,
     prior_ghostdag_k: LEGACY_DEFAULT_GHOSTDAG_K,
@@ -502,8 +481,8 @@ pub const MAINNET_PARAMS: Params = Params {
     prior_max_block_parents: 10,
     prior_mergeset_size_limit: (LEGACY_DEFAULT_GHOSTDAG_K as u64) * 10,
     prior_merge_depth: 3600,
-    prior_finality_depth: 86400,
-    prior_pruning_depth: 185798,
+    prior_finality_depth: 1720,
+    prior_pruning_depth: 3700,
     coinbase_payload_script_public_key_max_len: 150,
     max_coinbase_payload_len: 204,
 
@@ -511,10 +490,10 @@ pub const MAINNET_PARAMS: Params = Params {
     // check these rules, but in practice it's enforced by the network layer that limits the message
     // size to 1 GB.
     // These values should be lowered to more reasonable amounts on the next planned HF/SF.
-    prior_max_tx_inputs: 1_000_000_000,
-    prior_max_tx_outputs: 1_000_000_000,
-    prior_max_signature_script_len: 1_000_000_000,
-    prior_max_script_public_key_len: 1_000_000_000,
+    prior_max_tx_inputs: 1_000,
+    prior_max_tx_outputs: 1_000,
+    prior_max_signature_script_len: 10_000,
+    prior_max_script_public_key_len: 10_000,
 
     mass_per_tx_byte: 1,
     mass_per_script_pub_key_byte: 10,
@@ -538,7 +517,7 @@ pub const MAINNET_PARAMS: Params = Params {
 
     crescendo: CRESCENDO,
     // Roughly 2025-05-05 1500 UTC
-    crescendo_activation: ForkActivation::new(110_165_000),
+    crescendo_activation: ForkActivation::never(),
 };
 
 pub const TESTNET_PARAMS: Params = Params {

@@ -27,8 +27,8 @@ const {
     await rpc.connect();
     console.log(`Connecting to ${rpc.url}`)
 
-    const info = await rpc.getBalancesByAddresses({ addresses : ["kaspa:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp"]});
-    // const info = await rpc.getBalancesByAddresses(["kaspa:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp"]);
+    const info = await rpc.getBalancesByAddresses({ addresses : ["vecno:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp"]});
+    // const info = await rpc.getBalancesByAddresses(["vecno:qpamkvhgh0kzx50gwvvp5xs8ktmqutcy3dfs9dc3w7lm9rq0zs76vf959mmrp"]);
     console.log("GetBalancesByAddresses response:", info);
 
     await rpc.disconnect();

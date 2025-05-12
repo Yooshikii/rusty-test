@@ -55,7 +55,7 @@ impl MuHash {
 
     #[inline]
     // hashes the data and adds it to the muhash.
-    // Supports arbitrary length data (subject to the underlying hash function(Blake2b) limits)
+    // Supports arbitrary length data (subject to the underlying hash function(Blake3) limits)
     pub fn add_element(&mut self, data: &[u8]) {
         let element = data_to_element(data);
         self.numerator *= element;
@@ -63,7 +63,7 @@ impl MuHash {
 
     #[inline]
     // hashes the data and removes it from the muhash.
-    // Supports arbitrary length data (subject to the underlying hash function(Blake2b) limits)
+    // Supports arbitrary length data (subject to the underlying hash function(Blake3) limits)
     pub fn remove_element(&mut self, data: &[u8]) {
         let element = data_to_element(data);
         self.denominator *= element;

@@ -41,28 +41,28 @@ pub enum NetworkType {
 impl NetworkType {
     pub fn default_rpc_port(&self) -> u16 {
         match self {
-            NetworkType::Mainnet => 16110,
-            NetworkType::Testnet => 16210,
-            NetworkType::Simnet => 16510,
-            NetworkType::Devnet => 16610,
+            NetworkType::Mainnet => 7110,
+            NetworkType::Testnet => 7210,
+            NetworkType::Simnet => 7310,
+            NetworkType::Devnet => 7410,
         }
     }
 
     pub fn default_borsh_rpc_port(&self) -> u16 {
         match self {
-            NetworkType::Mainnet => 17110,
-            NetworkType::Testnet => 17210,
-            NetworkType::Simnet => 17510,
-            NetworkType::Devnet => 17610,
+            NetworkType::Mainnet => 8110,
+            NetworkType::Testnet => 8210,
+            NetworkType::Simnet => 8310,
+            NetworkType::Devnet => 8410,
         }
     }
 
     pub fn default_json_rpc_port(&self) -> u16 {
         match self {
-            NetworkType::Mainnet => 18110,
-            NetworkType::Testnet => 18210,
-            NetworkType::Simnet => 18510,
-            NetworkType::Devnet => 18610,
+            NetworkType::Mainnet => 9110,
+            NetworkType::Testnet => 9210,
+            NetworkType::Simnet => 9310,
+            NetworkType::Devnet => 9410,
         }
     }
 
@@ -241,14 +241,14 @@ impl NetworkId {
         // this reasoning so we keep it on the same port in order to simplify RPC client management (hence [`default_rpc_port`]
         // is defined on the [`NetworkType`] struct
         match self.network_type {
-            NetworkType::Mainnet => 16111,
+            NetworkType::Mainnet => 7111,
             NetworkType::Testnet => match self.suffix {
-                Some(10) => 16211,
-                Some(11) => 16311,
-                None | Some(_) => 16411,
+                Some(10) => 7211,
+                Some(11) => 7511,
+                None | Some(_) => 7611,
             },
-            NetworkType::Simnet => 16511,
-            NetworkType::Devnet => 16611,
+            NetworkType::Simnet => 7311,
+            NetworkType::Devnet => 7411,
         }
     }
 
