@@ -63,12 +63,12 @@ impl TryFrom<CpuMinerConfig> for Vec<String> {
                 argv.push("--port=7210");
             }
             _ => {
-                return Err(Error::Custom("network type is not suported by the CPU miner".to_string()));
+                return Err(Error::Custom("network type is not supported by the CPU miner".to_string()));
             }
         }
 
         let server = args.server.unwrap_or("127.0.0.1".to_string());
-        let server = format!("--kaspad-address={server}");
+        let server = format!("--vecnod-address={server}");
         argv.push(server.as_str());
 
         if args.address.is_none() {

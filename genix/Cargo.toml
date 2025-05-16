@@ -1,0 +1,13 @@
+[package]
+name = "genix-genesis-generator"
+version = "1.0.0"
+edition = "2021"
+rust-version.workspace = true
+
+[dependencies]
+kaspa-hashes = { version = "1.0.0", path = "../crypto/hashes" }
+kaspa-consensus-core = { version = "1.0.0", path = "../consensus/core" }
+kaspa-muhash = { version = "1.0.0", path = "../crypto/muhash" }
+thiserror = "1.0"
+rand_chacha.workspace = true
+borsh.workspace = true

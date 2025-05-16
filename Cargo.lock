@@ -1682,6 +1682,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "genix-genesis-generator"
+version = "1.0.0"
+dependencies = [
+ "borsh",
+ "kaspa-consensus-core",
+ "kaspa-hashes",
+ "kaspa-muhash",
+ "rand_chacha 0.3.1",
+ "thiserror 1.0.69",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4184,9 +4196,9 @@ checksum = "0e7465ac9959cc2b1404e8e2367b43684a6d13790fe23056cc8c6c5a6b7bcb94"
 
 [[package]]
 name = "matrixmultiply"
-version = "0.3.9"
+version = "0.3.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9380b911e3e96d10c1f415da0876389aaf1b56759054eeb0de7df940c456ba1a"
+checksum = "a06de3016e9fae57a36fd14dba131fccf49f74b40b7fbdb472f96e361ec71a08"
 dependencies = [
  "autocfg",
  "num_cpus",

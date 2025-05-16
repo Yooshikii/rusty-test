@@ -481,8 +481,8 @@ pub const MAINNET_PARAMS: Params = Params {
     prior_max_block_parents: 10,
     prior_mergeset_size_limit: (LEGACY_DEFAULT_GHOSTDAG_K as u64) * 10,
     prior_merge_depth: 3600,
-    prior_finality_depth: 1720,
-    prior_pruning_depth: 3700,
+    prior_finality_depth: 86400,
+    prior_pruning_depth: 185798,
     coinbase_payload_script_public_key_max_len: 150,
     max_coinbase_payload_len: 204,
 
@@ -490,10 +490,10 @@ pub const MAINNET_PARAMS: Params = Params {
     // check these rules, but in practice it's enforced by the network layer that limits the message
     // size to 1 GB.
     // These values should be lowered to more reasonable amounts on the next planned HF/SF.
-    prior_max_tx_inputs: 1_000,
-    prior_max_tx_outputs: 1_000,
-    prior_max_signature_script_len: 10_000,
-    prior_max_script_public_key_len: 10_000,
+    prior_max_tx_inputs: 1_000_000_000,
+    prior_max_tx_outputs: 1_000_000_000,
+    prior_max_signature_script_len: 1_000_000_000,
+    prior_max_script_public_key_len: 1_000_000_000,
 
     mass_per_tx_byte: 1,
     mass_per_script_pub_key_byte: 10,
@@ -516,21 +516,12 @@ pub const MAINNET_PARAMS: Params = Params {
     pruning_proof_m: 1000,
 
     crescendo: CRESCENDO,
-    // Roughly 2025-05-05 1500 UTC
-    crescendo_activation: ForkActivation::never(),
+    // Codename Eonspark
+    crescendo_activation: ForkActivation::always(),
 };
 
 pub const TESTNET_PARAMS: Params = Params {
-    dns_seeders: &[
-        // This DNS seeder is run by Tiram
-        "seeder1-testnet.kaspad.net",
-        // This DNS seeder is run by -gerri-
-        "dnsseeder-kaspa-testnet.x-con.at",
-        // This DNS seeder is run by H@H
-        "ns-testnet10.kaspa-dnsseeder.net",
-        // This DNS seeder is run by supertypo
-        "n-testnet-10.kaspa.ws",
-    ],
+    dns_seeders: &[],
     net: NetworkId::with_suffix(NetworkType::Testnet, 10),
     genesis: TESTNET_GENESIS,
     prior_ghostdag_k: LEGACY_DEFAULT_GHOSTDAG_K,

@@ -76,10 +76,10 @@ pub mod consensus {
     //
 
     /// **Legacy** finality depth (in block units)
-    pub const LEGACY_FINALITY_DEPTH: u64 = 1_720;
+    pub const LEGACY_FINALITY_DEPTH: u64 = 86_400;
 
     /// **New** finality duration expressed in time units (seconds).
-    pub const NEW_FINALITY_DURATION: u64 = 1_720; // 12 hours
+    pub const NEW_FINALITY_DURATION: u64 = 43_200; // 12 hours
 
     /// **New** pruning duration expressed in time units (seconds).
     pub const NEW_PRUNING_DURATION: u64 = 108_000; // 30 hours

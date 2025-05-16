@@ -5,7 +5,10 @@ use kaspa_utils::mem_size::MemSizeEstimator;
 use serde::{Deserialize, Serialize};
 
 /// @category Consensus
-#[derive(Clone, Debug, Serialize, Deserialize, BorshSerialize, BorshDeserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize, BorshSerialize, BorshDeserialize, PartialEq, Eq)]
+
+
+
 #[serde(rename_all = "camelCase")]
 pub struct Header {
     /// Cached hash

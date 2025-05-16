@@ -21,7 +21,7 @@ pub const STORAGE_MASS_PARAMETER: u64 = SOMPI_PER_KASPA * 10_000;
 pub const TRANSIENT_BYTE_TO_MASS_FACTOR: u64 = 4;
 
 /// MaxSompi is the maximum transaction amount allowed in sompi.
-pub const MAX_SOMPI: u64 = 29_000_000_000 * SOMPI_PER_KASPA;
+pub const MAX_SOMPI: u64 = 20_000_000_000 * SOMPI_PER_KASPA;
 
 // MAX_TX_IN_SEQUENCE_NUM is the maximum sequence number the sequence field
 // of a transaction input can be.
